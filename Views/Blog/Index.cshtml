@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Blog";
+}
+
+<h2>@ViewBag.BlogList</h2>
+
+@foreach (var i in Model)
+{
+    <h3>@i.Id</h3>
+    <h3>@i.Title</h3>
+    <h3>@i.Content</h3>
+    <h3>@i.Category</h3>
+}
+
