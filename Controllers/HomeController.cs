@@ -26,5 +26,22 @@ namespace LearningASPNETMVC.Controllers
 
             return View();
         }
+
+        public ContentResult PlainText()
+        {
+            return Content("Be Your Own Hero", "text/plain");
+        }
+
+        public ContentResult HtmlText()
+        {
+            return Content("<h1>Bengali Detectives: Byomkesh Bakshi, Feluda</h1.", "text/html");
+        }
+        
+        public ContentResult JsonText()
+        {
+            string jsonString = "{\"Root\": {\"Name\":\"Sourav Ganguly\"}}";
+            return Content(jsonString, "text/json");
+        }
+        
     }
 }
